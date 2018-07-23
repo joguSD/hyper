@@ -65,7 +65,7 @@ def wrap_socket(sock, server_hostname, ssl_context=None, force_proto=None):
         if proto is None:
             proto = ssl_sock.selected_npn_protocol()
 
-    return (ssl_sock, proto)
+    return (ssl_sock, 'h2')
 
 
 def init_context(cert_path=None, cert=None, cert_password=None):
